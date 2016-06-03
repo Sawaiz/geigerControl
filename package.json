@@ -1,0 +1,11 @@
+{
+  "name": "mppcControl",
+  "description": "Colntrol voltages and readback of MPPC boards",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "onoff": "*",
+    "ws": "*",
+    "forever": "*"
+  }
+}
