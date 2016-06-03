@@ -47,6 +47,7 @@ var positionList = config.positionList;
 //**END CONFIGURATION**//
 console.log("Server started");
 var GPIO = require('onoff').Gpio;
+var pg = require('pg');
 
 //Place all availible clients in array
 var clients = [];

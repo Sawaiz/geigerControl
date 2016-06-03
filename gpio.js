@@ -3,7 +3,7 @@ var ws;
 var positionList;
 
 function connect(){
-  ws = new WebSocket("ws://192.168.100.218/ws");
+  ws = new WebSocket("ws://location.hostname/ws");
   ws.onopen = function(){
     ws.send("clientsAvailable");
     ws.send("lvStatus");

@@ -1,12 +1,12 @@
-#Server Configuration for mppcControl
+#Server Configuration for nginxTemplate
 
 server {
 listen 80;
-server_name mppcControl;
+server_name nginxTemplate;
 
 #Configures the publicly served root directory
 #Configures the index file to be served
-root /var/www/mppcControl;
+root /var/www/nginxTemplate;
     index index.html index.htm;
 
 location /ws {

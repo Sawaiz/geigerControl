@@ -1,6 +1,6 @@
-#Running with docker
-Docker is container system for Linux that allows easy deployment of web applications.
-##Install Docker
+#Raspberry Pi Readout System
+Lets try makefile deployment.
+##Setting Up a new server
 It starts with flashing a raspberry pi image and then expanding the file system with raspi-config.
 ```bash
 sudo raspi-config
@@ -21,20 +21,17 @@ read -e -p "Username :" userName
 read -e -s -p "$userName Password :" userPasswd
 echo ""
 
-#First Update/upgrade
+#We need a newer version of node, this adds that link
+curl -sLS https://apt.adafruit.com/add | sudo bash
+
+#Update/upgrade
 apt-get update && apt-get -y upgrade
 
-#Install docker 1.5.07
-wget https://downloads.hypriot.com/docker-hypriot_1.10.3-1_armhf.deb
-dpkg -i docker-hypriot_1.10.3-1_armhf.deb
-rm docker-hypriot_1.10.3-1_armhf.deb
-
-systemctl unmask docker.service
-systemctl unmask docker.socket
-systemctl start docker.service
-systemctl enable docker
-
-sudo apt-get install docker.io
+#Install webserver, node, node package manager, sqlServer
+apt-get -y install nginx
+apt-get -y install node
+apt-get -y install npm
+apt-get install -y postgresql
 
 #Change root (pi) password
 echo "pi:$rootPasswd" | chpasswd

@@ -6,6 +6,7 @@
   "dependencies": {
     "onoff": "*",
     "ws": "*",
-    "forever": "*"
+    "forever": "*",
+    "pg": "*"
   }
 }
