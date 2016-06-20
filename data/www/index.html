@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Connect to Network</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<script type="text/javascript" src="assets/js/websocket.js" ></script>
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-loading">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Main -->
+		<section id="main">
+			<header id="mainHeader">
+				<div id="connect">
+					<!--<span class="avatar"><img src="images/avatar.jpg" alt="" /></span>-->
+					<h1>Connect to Network</h1>
+					<p>No known network found <br>Add credentials to connect</p>
+					<form method="post" action="#">
+						<div class="field">
+							<input type="text" name="ssid" id="ssid" placeholder="SSID"><br>
+							<input type="password" name="password" id="password" placeholder="Password"><br>
+						</div>
+						<ul class="actions">
+							<li><a class="button" onclick="changeWebAP()">Connect</a></li>
+						</ul>
+					</form>
+				</div>
+			</header>
+		</section>
+		<p id="lastMessage">Last Message</p>
+		<ul class="actions">
+			<li><a class="button" onclick="testDOMChange()">DOM Change</a></li>
+		</ul>
+
+
+		<!-- Footer -->
+		<footer id="footer">
+			<ul class="copyright">
+				<li>&copy; Sawaiz Syed</li><li>Design: <a href="http://sawaizsyed.com">Sawaiz</a></li>
+			</ul>
+		</footer>
+
+	</div>
+
+	<script>
+	if ('addEventListener' in window) {
+		window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+		document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+	}
+	</script>
+</body>
+</html>
